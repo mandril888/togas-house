@@ -12,13 +12,13 @@
       </template>
       <template v-slot:sidebar>
         <h3 class="subtitle">
-          All Categories
+          Categorias
         </h3>
         <div class="panel">
           <nuxt-link
             v-for="cat in allCats"
             :key="cat.slug"
-            :to="`/categories/${cat.slug}`"
+            :to="`/categorias/${cat.slug}`"
             :class="{
               'panel-block': true,
               'is-active': cat.slug === $route.params.single
@@ -37,6 +37,11 @@ export default {
   data() {
     return {
       allCats: []
+    }
+  },
+  head() {
+    return {
+      title: `${this.$store.state.name} | ${this.$siteConfig.siteName}`
     }
   },
   fetch({ store, params }) {

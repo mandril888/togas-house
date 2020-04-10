@@ -9,6 +9,9 @@
       </button>
     </site-hero>
     <main-section theme="one-column">
+      <h2>Categorías</h2>
+      <categories-grid />
+      <h2>Mejores habitaciones y pisos</h2>
       <template v-slot:default>
         <!-- All Posts -->
         <posts-grid />

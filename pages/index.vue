@@ -11,8 +11,10 @@
     <main-section theme="one-column">
       <h2>Categorías</h2>
       <categories-grid />
-      <h2>Mejores habitaciones y pisos</h2>
+    </main-section>
+    <main-section theme="one-column">
       <template v-slot:default>
+        <h2>Mejores habitaciones y pisos</h2>
         <!-- All Posts -->
         <posts-grid />
       </template>

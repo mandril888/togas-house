@@ -27,8 +27,8 @@ export default {
       link: '/about'
     },
     {
-      name: 'Contact',
-      link: '/contact'
+      name: 'Contacto',
+      link: '/contacto'
     }
   ],
   hero: {

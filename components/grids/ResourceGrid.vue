@@ -38,6 +38,12 @@ export default {
         return []
       }
     },
+    city: {
+      type: Array,
+      default() {
+        return []
+      }
+    },
     exclude: { type: String, default: '' }
   },
   data() {
@@ -141,6 +147,26 @@ export default {
           })
         }
         return resource.category.includes(this.category)
+      }
+      if (this.exclude && this.city.length) {
+        if (Array.isArray(this.city)) {
+          return (
+            resource.city.some((cat) => {
+              return this.city.includes(cat)
+            }) && resource.slug !== this.exclude
+          )
+        }
+        return (
+          resource.city.includes(this.city) && resource.slug !== this.exclude
+        )
+      }
+      if (this.city.length) {
+        if (Array.isArray(this.city)) {
+          return resource.city.some((cat) => {
+            return this.city.includes(cat)
+          })
+        }
+        return resource.city.includes(this.city)
       }
       if (this.exclude) {
         return resource.slug !== this.exclude

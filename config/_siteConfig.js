@@ -23,6 +23,10 @@ export default {
       link: '/categorias'
     },
     {
+      name: 'Ciudades',
+      link: '/ciudades'
+    },
+    {
       name: 'About',
       link: '/about'
     },
@@ -78,6 +82,14 @@ export default {
     perPage: 6,
     imageDimensions: null, // See card.imageDimensions (can be unique for categories if set here)
     theme: null // See card.theme (can be unique for categories if set here)
+  },
+
+  // Cities
+  cities: {
+    on: true,
+    perPage: 6,
+    imageDimensions: null, // See card.imageDimensions (can be unique for cities if set here)
+    theme: null // See card.theme (can be unique for cities if set here)
   },
 
   // Posts

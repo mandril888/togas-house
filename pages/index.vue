@@ -13,6 +13,10 @@
       <categories-grid />
     </main-section>
     <main-section theme="one-column">
+      <h2>Ciudades</h2>
+      <cities-grid />
+    </main-section>
+    <main-section theme="one-column">
       <template v-slot:default>
         <h2>Mejores habitaciones y pisos</h2>
         <!-- All Posts -->

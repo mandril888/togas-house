@@ -31,6 +31,12 @@ export default {
         return []
       }
     },
+    city: {
+      type: Array,
+      default() {
+        return []
+      }
+    },
     exclude: { type: String, default: '' }
   }
 }

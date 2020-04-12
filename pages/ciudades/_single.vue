@@ -9,18 +9,18 @@
       <template v-slot:default>
         <h2>Descripción</h2>
         <p class="mb-20">{{ $store.state.description }}</p>
-        <!-- Posts in Category -->
-        <posts-grid :category="[$store.state.name]" :per-row="2" />
+        <!-- Posts in City -->
+        <posts-grid :city="[$store.state.name]" :per-row="2" />
       </template>
       <template v-slot:sidebar>
         <h3 class="subtitle">
-          Categorias
+          Ciudades
         </h3>
         <div class="panel">
           <nuxt-link
             v-for="cat in allCats"
             :key="cat.slug"
-            :to="`/categorias/${cat.slug}`"
+            :to="`/ciudades/${cat.slug}`"
             :class="{
               'panel-block': true,
               'is-active': cat.slug === $route.params.single
@@ -47,10 +47,10 @@ export default {
     }
   },
   fetch({ store, params }) {
-    setPageData(store, { resource: 'category', slug: params.single })
+    setPageData(store, { resource: 'city', slug: params.single })
   },
   async created() {
-    this.allCats = await this.$cms.category.getAll()
+    this.allCats = await this.$cms.city.getAll()
   }
 }
 </script>

@@ -3,6 +3,8 @@ title: Built For Speed
 subtitle: Awake is Built to Be Blazing Fast
 category:
   - Habitaciones
+city:
+  - Barcelona
 author: Daniel Kelly
 date: 2019-08-02T04:27:56.800Z
 featureImage: /uploads/marc-olivier-jodoin-nqoinj-ttqm-unsplash.jpg

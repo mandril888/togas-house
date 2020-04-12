@@ -33,7 +33,7 @@ collections:
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Info", name: "info", widget: "markdown"}
       - {label: "Description", name: "description", widget: "markdown"}
-  - name: "cites"
+  - name: "cities"
     label: "Cities"
     folder: "content/cities"
     create: true

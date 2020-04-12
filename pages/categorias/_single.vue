@@ -2,11 +2,13 @@
   <div id="category-page" class="page-wrapper category-page">
     <site-hero
       :title="$store.state.name"
-      :subtitle="$store.state.content"
+      :subtitle="$store.state.info"
       :image="$store.state.image"
     />
     <main-section theme="sidebar-right">
       <template v-slot:default>
+        <h2>Descripción</h2>
+        <p>{{ $store.state.description }}</p>
         <!-- Posts in Category -->
         <posts-grid :category="[$store.state.name]" :per-row="2" />
       </template>
